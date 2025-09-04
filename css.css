@@ -1,0 +1,269 @@
+* {
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(0, 100%, 68%);
+  --Blue950: hsl(230, 29%, 20%);
+  --Blue100: hsl(207, 33%, 95%);
+  --heavyGray: rgb(108, 108, 108);
+  --mainFont: "Barlow Condensed", sans-serif;
+  --gray: rgb(159, 159, 159);
+  --softGray: rgba(227, 227, 227, 0.466);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+/* .mainImg{
+
+} */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 10;
+  /* z-index: 1; */
+}
+.icon-close {
+  position: relative;
+  z-index: 1;
+  width: 1.3rem;
+  display: none;
+  cursor: pointer;
+}
+
+.grayDiv {
+  background-color: var(--Blue100);
+  width: 50%;
+  height: 60vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-bottom-left-radius: 3.7rem;
+}
+
+section {
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1;
+  /* z-index: 1; */
+}
+
+.dashboard-hero {
+  margin-top: 5.5rem;
+}
+
+.logo {
+  width: 1.5rem;
+}
+
+.hamburger {
+  width: 1.7rem;
+  cursor: pointer;
+}
+
+.badge-new {
+  border: 1px solid black;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: black;
+  color: white;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.intro {
+  text-transform: uppercase;
+  color: rgb(159, 159, 159);
+  letter-spacing: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.introBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-around; */
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.mainContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.headline {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 1000;
+  -webkit-text-stroke: 1px black;
+  line-height: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.7rem 2rem;
+  font-family: var(--mainFont);
+  letter-spacing: 0.05rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.cta-subtext {
+  font-family: var(--mainFont);
+  color: var(--gray);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.description {
+  color: var(--heavyGray);
+  font-family: var(--mainFont);
+  letter-spacing: 0.05rem;
+  font-size: 1.2rem;
+}
+/* this is for the drop down icon */
+
+.dropdownBox {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 30vh;
+  border: 1px solid black;
+  z-index: 11;
+  background-color: white;
+  list-style: none;
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+
+.dropdownBox li a {
+  text-decoration: none;
+  font-family: var(--mainFont);
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+hr {
+  background-color: var(--softGray);
+  height: 0.02rem;
+  width: 80%;
+}
+
+.loginLink {
+  color: var(--heavyGray);
+}
+
+.dropdownForLargerScreen {
+  display: none;
+}
+
+/* for desktop */
+
+@media screen and (min-width: 75rem) {
+  section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  header {
+    padding: 5rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .icon-close {
+    display: none;
+  }
+
+  .dropdownForLargerScreen {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .dropdownForLargerScreen li {
+    display: inline;
+  }
+
+  .dropdownForLargerScreen a {
+    text-decoration: none;
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+
+  .dropdownForLargerScreen a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .dropdownForLargerScreen .login {
+    margin-left: 4rem;
+  }
+
+  .dashboard-hero {
+    padding: 5rem;
+    margin-top: 0;
+  }
+
+  .cta{
+    margin-top: 1.5rem;
+  }
+}
